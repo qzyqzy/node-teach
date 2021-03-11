@@ -55,3 +55,21 @@ jest hello --watch 实时监视 修改代码之后可以立即测试出效果
 注意点
 
 - jest hello 运行失败时  先初始化项目 npm init
+
+  
+
+##### 测试代码生成工具
+
+###### 生成测试文件名
+
+```
+test('测试代码工具生成文件名', () => {
+    let test = new (require('./../index'))()
+    let res = test.getFileName('/mytest/index.js')
+    expect(res).toBe('/mytest/__test__/index.spec.js')
+})
+```
+
+我们可以先写好测试代码，测试驱动，然后实时修改我们的代码
+
+###### 生成测试代码
