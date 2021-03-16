@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post-koa</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    form {
+        text-align: center;
+        margin: 50px 0;
+    }
+</style>
+
+<body>
+    <div>
+        <form action="/post" method="post">
+            <p>原生</p>
+            用户名：<input type="text" name='username' value="qzyqzy">
+            <input type="submit" value="提交">
+        </form>
+        <form action="/post/middleware" method="post">
+            <p>中间件</p>
+            用户名：<input type="text" name='username' value="node">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+
+</html>
